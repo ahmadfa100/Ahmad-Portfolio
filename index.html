@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pulsing Interactive Node Network</title>
+  <link rel="stylesheet" href="./css/background.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="network"></canvas>
+
+  <section class="profile">
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-image-wrapper">
+          <div class="profile-image-container">
+            <img src="./Me.jpg" alt="Ahmad's Profile Picture" />
+            <div class="profile-image-border"></div>
+            <div class="profile-status">
+              <div class="status-dot"></div>
+              <span>Available for opportunities</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="profile-info">
+          <div class="name-title">
+            <h1>Ahmad Faisal</h1>
+            <div class="professional-title">
+              <i class="fas fa-code"></i>
+              <span>Full-Stack Developer</span>
+            </div>
+            <div class="professional-subtitle">
+              <i class="fas fa-trophy"></i>
+              <span>Competitive Programmer</span>
+            </div>
+          </div>
+          
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Problems Solved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-content">
+        <div class="about-section">
+          <h3><i class="fas fa-user"></i> About Me</h3>
+          <p class="tagline">
+            I'm a passionate Software Engineer specializing in Full-Stack Web Development and Competitive Programming. 
+            With a strong foundation in modern technologies and a love for problem-solving, I create efficient, 
+            user-focused solutions that make a difference. Currently diving deep into AI and machine learning 
+            to expand my skill set and stay ahead of industry trends.
+          </p>
+        </div>
+        
+        <div class="skills-section">
+          <h3><i class="fas fa-tools"></i> Core Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Frontend</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Backend</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Tools & Others</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="projects-container">
+      <div class="projects-header">
+        <h2><i class="fas fa-rocket"></i> Featured Projects</h2>
+        <p>Explore my latest work and innovative solutions</p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <h3>Green Bridge</h3>
+            <p class="project-description">
+              A revolutionary platform connecting farmers and landowners for sustainable agricultural partnerships. 
+              Features real-time communication, contract management, and resource optimization tools.
+            </p>
+            
+            <div class="project-features">
+              <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <span>Farmer-Landowner Matching</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Resource Optimization</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-file-contract"></i>
+                <span>Contract Management</span>
+              </div>
+            </div>
+            
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fab fa-github"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-image-placeholder appointment">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <h3>Book Appointment</h3>
+            <p class="project-description">
+              A comprehensive patient appointment management system with intelligent scheduling, 
+              automated reminders, and seamless healthcare provider coordination.
+            </p>
+            
+            <div class="project-features">
+              <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <span>Smart Scheduling</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-bell"></i>
+                <span>Automated Reminders</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-user-md"></i>
+                <span>Provider Coordination</span>
+              </div>
+            </div>
+            
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fab fa-github"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-image-placeholder bus">
+              <i class="fas fa-bus"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <h3>Bus Ticket System</h3>
+            <p class="project-description">
+              A modern mobile application for seamless bus ticket booking with real-time tracking, 
+              digital tickets, and integrated payment processing for enhanced travel experience.
+            </p>
+            
+            <div class="project-features">
+              <div class="feature-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Real-time Tracking</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Digital Tickets</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Secure Payments</span>
+              </div>
+            </div>
+            
+            <div class="project-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fab fa-github"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="projects-footer">
+        <a href="#" class="btn btn-more">
+          <i class="fas fa-plus"></i>
+          View More Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="blog-container">
+      <div class="blog-header">
+        <h2><i class="fas fa-pen-fancy"></i> Latest Insights</h2>
+        <p>Thoughts on technology, development, and innovation</p>
+      </div>
+      
+      <div class="blog-content">
+        <article class="blog-post">
+          <div class="blog-post-image">
+            <div class="blog-image-placeholder">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="blog-post-meta">
+              <span class="blog-category">AI & Machine Learning</span>
+              <span class="blog-date">December 15, 2024</span>
+            </div>
+          </div>
+          
+          <div class="blog-post-content">
+            <h3>The Future of AI in Software Development</h3>
+            <p class="blog-excerpt">
+              Exploring how artificial intelligence is revolutionizing the way we write code, 
+              debug applications, and build software solutions. From automated testing to 
+              intelligent code completion, AI is becoming an indispensable tool for developers.
+            </p>
+            
+            <div class="blog-post-tags">
+              <span class="blog-tag">Artificial Intelligence</span>
+              <span class="blog-tag">Software Development</span>
+              <span class="blog-tag">Future Tech</span>
+            </div>
+            
+            <div class="blog-post-stats">
+              <div class="stat">
+                <i class="fas fa-eye"></i>
+                <span>2.5k views</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-heart"></i>
+                <span>128 likes</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-comment"></i>
+                <span>24 comments</span>
+              </div>
+            </div>
+            
+            <div class="blog-post-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-book-open"></i>
+                Read Full Article
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="blog-footer">
+        <a href="#" class="btn btn-more">
+          <i class="fas fa-plus"></i>
+          View All Articles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="connections">
+    <div class="connections-container">
+      <h3>Connect With Me</h3>
+      <div class="social-links">
+        <a href="https://twitter.com/yourusername" target="_blank" class="social-link twitter">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
+        </a>
+        <a href="https://leetcode.com/yourusername" target="_blank" class="social-link leetcode">
+          <i class="fas fa-code"></i>
+          <span>LeetCode</span>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link linkedin">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="social-link github">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://codeforces.com/profile/yourusername" target="_blank" class="social-link codeforces">
+          <i class="fas fa-trophy"></i>
+          <span>Codeforces</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="./background.js"></script>
+</body>
+</html>
