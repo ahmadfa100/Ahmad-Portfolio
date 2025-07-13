@@ -852,31 +852,35 @@ html {
 }
 
 .tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   background: rgba(102, 126, 234, 0.2);
   border: 1px solid rgba(102, 126, 234, 0.3);
   color: #e2e8f0;
   padding: 0.4rem 0.8rem;
   border-radius: 16px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  cursor: pointer;
+  overflow: visible;
 }
 
-.tech-tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s;
+.tech-tag i, .tech-tag img.tech-icon-img {
+  font-size: 1.2em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.tech-tag:hover::before {
-  left: 100%;
+.tech-tag img.tech-icon-img {
+  object-fit: contain;
+  border-radius: 4px;
+  background: transparent;
+  margin: 0 2px;
 }
 
 .tech-tag:hover {
@@ -884,6 +888,32 @@ html {
   border-color: rgba(102, 126, 234, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Custom Tooltip */
+.tech-tag[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  background: #222b;
+  color: #fff;
+  padding: 0.35em 0.8em;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 0.85em;
+  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.2s;
+}
+
+.tech-tag[title]::after {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Project Content */
@@ -1956,38 +1986,68 @@ html {
 }
 
 .tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   background: rgba(102, 126, 234, 0.2);
   border: 1px solid rgba(102, 126, 234, 0.3);
   color: #e2e8f0;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  cursor: pointer;
+  overflow: visible;
 }
 
-.tech-tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s;
+.tech-tag i, .tech-tag img.tech-icon-img {
+  font-size: 1.2em;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.tech-tag:hover::before {
-  left: 100%;
+.tech-tag img.tech-icon-img {
+  object-fit: contain;
+  border-radius: 4px;
+  background: transparent;
+  margin: 0 2px;
 }
 
 .tech-tag:hover {
   background: rgba(102, 126, 234, 0.3);
   border-color: rgba(102, 126, 234, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Custom Tooltip */
+.tech-tag[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  background: #222b;
+  color: #fff;
+  padding: 0.35em 0.8em;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 0.85em;
+  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.2s;
+}
+
+.tech-tag[title]::after {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Responsive Design for Experience */

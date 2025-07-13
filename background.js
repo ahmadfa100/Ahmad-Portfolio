@@ -139,6 +139,6 @@ function updateClock() {
 
 // Initialize clock and update every second
 document.addEventListener('DOMContentLoaded', function() {
-  updateClock(); // Initial update
-  setInterval(updateClock, 1000); // Update every second
+  updateClock(); 
+  setInterval(updateClock, 1000); 
 });
