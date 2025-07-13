@@ -1,7 +1,6 @@
 const canvas = document.getElementById('network');
 const ctx    = canvas.getContext('2d');
 
-// full‑screen canvas
 function resize() {
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -9,13 +8,12 @@ function resize() {
 window.addEventListener('resize', resize);
 resize();
 
-// settings
 const MAX_INITIAL    = 30;
 const CONNECT_DIST   = 150;
-const SPEED          = 5.3;   // node drift speed
-const WAVE_SPEED     = 0.5;   // px per ms
-const WAVE_THICKNESS = 5;     // how “wide” the wave front is
-const PULSE_DURATION = 300;   // ms a node stays lit
+const SPEED          = 5.3;   
+const WAVE_SPEED     = 0.5;   
+const WAVE_THICKNESS = 5;     
+const PULSE_DURATION = 300;   
 
 let nextWaveId = 1;
 const nodes = [];
@@ -31,7 +29,6 @@ function makeNode(x, y) {
   };
 }
 
-// seed initial nodes
 for (let i = 0; i < MAX_INITIAL; i++) {
   nodes.push(makeNode(
     Math.random() * canvas.width,
@@ -42,11 +39,9 @@ for (let i = 0; i < MAX_INITIAL; i++) {
 function loop() {
   const now = performance.now();
 
-  // fill the entire canvas with #111
   ctx.fillStyle = '#111';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // move & bounce
   for (let n of nodes) {
     n.x += n.vx;
     n.y += n.vy;
@@ -54,7 +49,6 @@ function loop() {
     if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
   }
 
-  // process waves
   for (let w of waves) {
     const age = now - w.t0;
     const radius = age * WAVE_SPEED;
@@ -70,7 +64,6 @@ function loop() {
     }
   }
 
-  // prune old waves
   const maxDim = Math.hypot(canvas.width, canvas.height);
   for (let i = waves.length - 1; i >= 0; i--) {
     if ((now - waves[i].t0) * WAVE_SPEED > maxDim) {
@@ -78,7 +71,6 @@ function loop() {
     }
   }
 
-  // draw connections
   ctx.strokeStyle = 'rgba(100,200,255,0.2)';
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
@@ -96,7 +88,6 @@ function loop() {
     }
   }
 
-  // draw nodes (with pulse highlight)
   for (let n of nodes) {
     const since = now - n.pulseTime;
     if (since < PULSE_DURATION) {
@@ -118,18 +109,36 @@ function loop() {
 
 loop();
 
-// **Spawn a new node + ripple on *any* click** (even over your profile card)
 window.addEventListener('click', e => {
   const x = e.clientX;
   const y = e.clientY;
 
-  // new drifting node at click
   nodes.push(makeNode(x, y));
 
-  // create a new wave centered at click
   waves.push({
     id: nextWaveId++,
     x, y,
     t0: performance.now()
   });
+});
+
+// Clock functionality
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  
+  // Update digital time
+  const digitalTime = document.getElementById('digital-time');
+  if (digitalTime) {
+    const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    digitalTime.textContent = timeString;
+  }
+}
+
+// Initialize clock and update every second
+document.addEventListener('DOMContentLoaded', function() {
+  updateClock(); // Initial update
+  setInterval(updateClock, 1000); // Update every second
 });

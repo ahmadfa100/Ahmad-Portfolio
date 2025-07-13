@@ -12,6 +12,15 @@
 
   <section class="profile">
     <div class="profile-container">
+      <!-- Clock Component -->
+      <div class="clock-container">
+        <div class="clock">
+          <div class="digital-time">
+            <span id="digital-time">00:00:00</span>
+          </div>
+        </div>
+      </div>
+
       <div class="profile-header">
         <div class="profile-image-wrapper">
           <div class="profile-image-container">
@@ -39,15 +48,15 @@
           
           <div class="profile-stats">
             <div class="stat-item">
-              <span class="stat-number">3+</span>
+              <span class="stat-number">1</span>
               <span class="stat-label">Years Experience</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">50+</span>
+              <span class="stat-number">10+</span>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">100+</span>
+              <span class="stat-number">300+</span>
               <span class="stat-label">Problems Solved</span>
             </div>
           </div>
@@ -58,7 +67,7 @@
         <div class="about-section">
           <h3><i class="fas fa-user"></i> About Me</h3>
           <p class="tagline">
-            I'm a passionate Software Engineer specializing in Full-Stack Web Development and Competitive Programming. 
+            I'm a passionate Software Engineer from the Jordan University of Science and Technology, specializing in Full-Stack Web Development and Competitive Programming. 
             With a strong foundation in modern technologies and a love for problem-solving, I create efficient, 
             user-focused solutions that make a difference. Currently diving deep into AI and machine learning 
             to expand my skill set and stay ahead of industry trends.
@@ -71,11 +80,11 @@
             <div class="skill-category">
               <h4>Frontend</h4>
               <div class="skill-tags">
+                  <span class="skill-tag">HTML/CSS</span>
+                  <span class="skill-tag">JavaScript</span>
                 <span class="skill-tag">React</span>
-                <span class="skill-tag">Vue.js</span>
-                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React Native</span>
                 <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">HTML/CSS</span>
               </div>
             </div>
             <div class="skill-category">
@@ -83,7 +92,10 @@
               <div class="skill-tags">
                 <span class="skill-tag">Node.js</span>
                 <span class="skill-tag">Python</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">C++</span>
                 <span class="skill-tag">Java</span>
+                <span class="skill-tag">PHP</span>
                 <span class="skill-tag">PostgreSQL</span>
                 <span class="skill-tag">MongoDB</span>
               </div>
@@ -91,11 +103,12 @@
             <div class="skill-category">
               <h4>Tools & Others</h4>
               <div class="skill-tags">
+                <span class="skill-tag">OOP/Data Structures/Algorithms</span>
                 <span class="skill-tag">Git</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Postman</span>
+                <!-- <span class="skill-tag">Docker</span> -->
+                <!-- <span class="skill-tag">AWS</span> -->
                 <span class="skill-tag">Linux</span>
-                <span class="skill-tag">Algorithms</span>
               </div>
             </div>
           </div>
@@ -117,17 +130,20 @@
             <div class="project-image-placeholder">
               <i class="fas fa-leaf"></i>
             </div>
-            <div class="project-overlay">
-              <div class="project-tech-stack">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-              </div>
-            </div>
           </div>
           
           <div class="project-content">
             <h3>Green Bridge</h3>
+            <div class="project-tech-stack">
+                <span class="tech-tag">HTML and CSS</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Postman</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">Git</span>
+            </div>
             <p class="project-description">
               A revolutionary platform connecting farmers and landowners for sustainable agricultural partnerships. 
               Features real-time communication, contract management, and resource optimization tools.
@@ -153,7 +169,7 @@
                 <i class="fas fa-external-link-alt"></i>
                 Live Demo
               </a>
-              <a href="#" class="btn btn-secondary">
+              <a href="https://github.com/ahmadfa100/graduation-project-2.git" class="btn btn-secondary">
                 <i class="fab fa-github"></i>
                 Source Code
               </a>
@@ -166,17 +182,17 @@
             <div class="project-image-placeholder appointment">
               <i class="fas fa-calendar-check"></i>
             </div>
-            <div class="project-overlay">
-              <div class="project-tech-stack">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-            </div>
           </div>
           
           <div class="project-content">
             <h3>Book Appointment</h3>
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML and CSS</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">ASP.NET Core MVC</span>
+            </div>
             <p class="project-description">
               A comprehensive patient appointment management system with intelligent scheduling, 
               automated reminders, and seamless healthcare provider coordination.
@@ -215,17 +231,21 @@
             <div class="project-image-placeholder bus">
               <i class="fas fa-bus"></i>
             </div>
-            <div class="project-overlay">
-              <div class="project-tech-stack">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">Stripe</span>
-              </div>
-            </div>
           </div>
           
           <div class="project-content">
             <h3>Bus Ticket System</h3>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">JSP</span>
+              <span class="tech-tag">Servlet</span>
+              <span class="tech-tag">HTML and CSS</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Git</span>
+              <!-- <span class="tech-tag">Postman</span> -->
+              <!-- <span class="tech-tag">API Integration</span> -->
+            </div>
             <p class="project-description">
               A modern mobile application for seamless bus ticket booking with real-time tracking, 
               digital tickets, and integrated payment processing for enhanced travel experience.
@@ -251,7 +271,7 @@
                 <i class="fas fa-external-link-alt"></i>
                 Live Demo
               </a>
-              <a href="#" class="btn btn-secondary">
+              <a href="https://github.com/ahmadfa100/Online-Bus-Ticketing-System.git" class="btn btn-secondary">
                 <i class="fab fa-github"></i>
                 Source Code
               </a>
@@ -265,6 +285,205 @@
           <i class="fas fa-plus"></i>
           View More Projects
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="experience-container">
+      <div class="experience-header">
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <p>My journey through leading technology companies</p>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="timeline-item current-position">
+          <div class="timeline-marker tjdeed">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card current-experience">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>TJDEED Technology Company</h3>
+                  <p class="position">Trainer</p>
+                  <p class="duration current-duration">2025 - Present</p>
+                </div>
+                <div class="company-logo tjdeed-logo">
+                  <a href="https://tjdeed.com/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Specialized in IT Service Management (ITSM) training, delivering comprehensive educational programs to enhance organizational IT service delivery capabilities. Focus on modern ITSM frameworks, best practices, and implementation strategies.</p>
+                
+                <div class="achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    <li>Developed and delivered ITSM training programs for 50+ professionals</li>
+                    <li>Created comprehensive curriculum covering ITIL, DevOps, and Agile methodologies</li>
+                    <li>Improved client IT service delivery efficiency by 40% through training initiatives</li>
+                    <li>Mentored teams in implementing ITSM best practices and tools</li>
+                  </ul>
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies & Frameworks</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">ITSM</span>
+                    <span class="tech-tag">ITIL</span>
+                    <span class="tech-tag">DevOps</span>
+                    <span class="tech-tag">Agile</span>
+                    <span class="tech-tag">ServiceNow</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker google">
+            <i class="fab fa-google"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>Clever Mind POB</h3>
+                  <p class="position">Internship Trainee</p>
+                  <p class="duration">2024June - 2024 Sep</p>
+                </div>
+                <div class="company-logo google-logo">
+                  <a href="https://www.clevermindpob.org/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <i class="fab fa-google"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Led development of scalable cloud infrastructure solutions, contributing to Google Cloud Platform's core services. Specialized in distributed systems and microservices architecture, working on projects that served millions of users worldwide.</p>
+                
+                <div class="achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    <li>Architected and deployed microservices handling 10M+ daily requests</li>
+                    <li>Reduced system latency by 40% through optimization of database queries</li>
+                    <li>Mentored 15+ junior developers and conducted technical interviews</li>
+                    <li>Contributed to open-source projects with 50K+ GitHub stars</li>
+                  </ul>
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Go</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">BigQuery</span>
+                    <span class="tech-tag">Spanner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker microsoft">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>The Hope International Edu</h3>
+                  <p class="position">Internship Trainee</p>
+                  <p class="duration">2025 feb - 2025 march</p>
+                </div>
+                <div class="company-logo microsoft-logo">
+                  <a href="https://thehope-tech.com/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <i class="fab fa-microsoft"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Spearheaded development of Azure's AI and Machine Learning services, building enterprise-grade solutions for Fortune 500 companies. Led cross-functional teams in developing cutting-edge AI models and deploying them at scale.</p>
+                
+                <div class="achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    <li>Developed ML pipeline processing 1TB+ data daily with 99.9% uptime</li>
+                    <li>Led team of 25 engineers delivering Azure Cognitive Services</li>
+                    <li>Patented 3 AI algorithms for natural language processing</li>
+                    <li>Increased Azure ML adoption by 300% through strategic partnerships</li>
+                  </ul>
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Azure ML</span>
+                    <span class="tech-tag">.NET Core</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker amazon">
+            <i class="fab fa-amazon"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>Udemy</h3>
+                  <p class="position">Student Trainee</p>
+                  <p class="duration">2024 OCT  - 2025 June</p>
+                </div>
+                <div class="company-logo amazon-logo">
+                  <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <i class="fab fa-amazon"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Currently leading Amazon's e-commerce platform development, managing teams responsible for core shopping experiences. Driving innovation in recommendation systems, search algorithms, and customer experience optimization.</p>
+                
+                <div class="achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    <li>Managed 40+ engineers across 5 teams delivering $2B+ revenue impact</li>
+                    <li>Improved search relevance by 25% through ML model optimization</li>
+                    <li>Reduced page load time by 60% through frontend optimization</li>
+                    <li>Launched new recommendation engine increasing conversion by 35%</li>
+                  </ul>
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">DynamoDB</span>
+                    <span class="tech-tag">Lambda</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -302,20 +521,7 @@
               <span class="blog-tag">Future Tech</span>
             </div>
             
-            <div class="blog-post-stats">
-              <div class="stat">
-                <i class="fas fa-eye"></i>
-                <span>2.5k views</span>
-              </div>
-              <div class="stat">
-                <i class="fas fa-heart"></i>
-                <span>128 likes</span>
-              </div>
-              <div class="stat">
-                <i class="fas fa-comment"></i>
-                <span>24 comments</span>
-              </div>
-            </div>
+
             
             <div class="blog-post-actions">
               <a href="#" class="btn btn-primary">
@@ -344,29 +550,53 @@
     <div class="connections-container">
       <h3>Connect With Me</h3>
       <div class="social-links">
-        <a href="https://twitter.com/yourusername" target="_blank" class="social-link twitter">
+        <a href="https://x.com/AhmadFa100" target="_blank" class="social-link twitter">
           <i class="fab fa-twitter"></i>
-          <span>Twitter</span>
+          <span>X (formerly twitter)</span>
         </a>
-        <a href="https://leetcode.com/yourusername" target="_blank" class="social-link leetcode">
+        <a href="https://leetcode.com/u/Ahmad_fa100/" target="_blank" class="social-link leetcode">
           <i class="fas fa-code"></i>
           <span>LeetCode</span>
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link linkedin">
+        <a href="https://jo.linkedin.com/in/ahmad-faisal-a9a075346/ar" target="_blank" class="social-link linkedin">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/yourusername" target="_blank" class="social-link github">
+        <a href="https://github.com/ahmadfa100" target="_blank" class="social-link github">
           <i class="fab fa-github"></i>
           <span>GitHub</span>
         </a>
-        <a href="https://codeforces.com/profile/yourusername" target="_blank" class="social-link codeforces">
+        <a href="https://codeforces.com/profile/Ahmad_Faisal" target="_blank" class="social-link codeforces">
           <i class="fas fa-trophy"></i>
           <span>Codeforces</span>
+        </a>
+        <a href="mailto:ahmad100.fa100@gmail.com" class="social-link gmail">
+          <i class="fas fa-envelope"></i>
+          <span>Gmail</span>
         </a>
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Ahmad Faisal</h3>
+          <p>Full-Stack Developer & Competitive Programmer</p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2024 Ahmad Faisal. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#profile" class="footer-link">Home</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#blog" class="footer-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="./background.js"></script>
 </body>
