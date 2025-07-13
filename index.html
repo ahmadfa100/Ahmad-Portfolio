@@ -47,16 +47,20 @@
           </div>
           
           <div class="profile-stats">
-            <div class="stat-item">
-              <span class="stat-number">1</span>
+            <!-- <div class="stat-item">
+              <span id="years-experience" class="stat-number"></span>
               <span class="stat-label">Years Experience</span>
+            </div> -->
+            <div class="stat-item">
+              <span class="stat-number shine-effect">Recent Graduate</span>
+              <span class="stat-label">Jordan University of Science and Technology</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">10+</span>
+              <span class="stat-number shine-effect">10+</span>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">300+</span>
+              <span class="stat-number shine-effect">300+</span>
               <span class="stat-label">Problems Solved</span>
             </div>
           </div>
@@ -311,7 +315,7 @@
                 </div>
                 <div class="company-logo tjdeed-logo">
                   <a href="https://tjdeed.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <i class="fas fa-chalkboard-teacher"></i>
+                    <img src="./company logos/Tjdeed logo.png" alt="TJDEED Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
                   </a>
                 </div>
               </div>
@@ -346,7 +350,7 @@
 
         <div class="timeline-item">
           <div class="timeline-marker google">
-            <i class="fab fa-google"></i>
+            <i class="fas fa-tasks"></i>
           </div>
           <div class="timeline-content">
             <div class="experience-card">
@@ -358,7 +362,7 @@
                 </div>
                 <div class="company-logo google-logo">
                   <a href="https://www.clevermindpob.org/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <i class="fab fa-google"></i>
+                    <img src="./company logos/Clever mind Pob logo.png" alt="Clever Mind POB Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
                   </a>
                 </div>
               </div>
@@ -393,7 +397,7 @@
 
         <div class="timeline-item">
           <div class="timeline-marker microsoft">
-            <i class="fab fa-microsoft"></i>
+            <i class="fas fa-chalkboard-teacher"></i>
           </div>
           <div class="timeline-content">
             <div class="experience-card">
@@ -405,7 +409,7 @@
                 </div>
                 <div class="company-logo microsoft-logo">
                   <a href="https://thehope-tech.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <i class="fab fa-microsoft"></i>
+                    <img src="./company logos/The Hope logo.png" alt="The Hope Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
                   </a>
                 </div>
               </div>
@@ -440,7 +444,7 @@
 
         <div class="timeline-item">
           <div class="timeline-marker amazon">
-            <i class="fab fa-amazon"></i>
+            <i class="fas fa-laptop-code"></i>
           </div>
           <div class="timeline-content">
             <div class="experience-card">
@@ -452,7 +456,7 @@
                 </div>
                 <div class="company-logo amazon-logo">
                   <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <i class="fab fa-amazon"></i>
+                    <img src="./company logos/logo-udemy.svg" alt="Udemy Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
                   </a>
                 </div>
               </div>
@@ -586,7 +590,7 @@
           <p>Full-Stack Developer & Competitive Programmer</p>
         </div>
         <div class="footer-copyright">
-          <p>&copy; 2024 Ahmad Faisal. All rights reserved.</p>
+          <p>&copy; <span id="footer-year"></span> Ahmad Faisal. All rights reserved.</p>
         </div>
         <div class="footer-links">
           <a href="#profile" class="footer-link">Home</a>
@@ -597,6 +601,20 @@
       </div>
     </div>
   </footer>
+
+  <script src="./background.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentYear = new Date().getFullYear();
+      const footerYearElem = document.getElementById('footer-year');
+      if (footerYearElem) footerYearElem.textContent = currentYear;
+
+      const startYear = 2025; 
+      const experience = currentYear - startYear;
+      const yearsElem = document.getElementById('years-experience');
+      if (yearsElem) yearsElem.textContent = `${experience}+`;
+    });
+  </script>
 
   <script src="./background.js"></script>
 </body>

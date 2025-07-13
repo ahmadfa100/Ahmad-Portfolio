@@ -2436,3 +2436,32 @@ html {
     letter-spacing: 1px;
   }
 }
+
+.shine-effect {
+  position: relative;
+  color: #fff;
+  background: linear-gradient(90deg, #ffd700 20%, #fff 40%, #ffd700 60%, #fff8dc 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-move 2s linear infinite, glow-pulse 5.5s ease-in-out infinite;
+  font-weight: bold;
+}
+
+@keyframes shine-move {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 8px #ffd700, 0 0 16px #fff8dc, 0 0 24px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 24px #fff8dc, 0 0 32px #ffd700, 0 0 40px #fff;
+  }
+}
