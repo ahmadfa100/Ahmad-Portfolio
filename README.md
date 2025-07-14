@@ -1,6 +1,6 @@
 # Ahmad Faisal - Portfolio Website
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Screenshot)
+![Portfolio Preview]([https://via.placeholder.com/800x400?text=Portfolio+Screenshot](https://ahmadfa100.github.io/Ahmad-Portfolio/))
 
 A responsive portfolio website showcasing my skills, projects, and professional experience as a Full-Stack Developer and Competitive Programmer.
 
