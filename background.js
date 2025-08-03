@@ -39,7 +39,8 @@ for (let i = 0; i < MAX_INITIAL; i++) {
 function loop() {
   const now = performance.now();
 
-  ctx.fillStyle = '#111';
+  const isLight = document.body.classList.contains('light-mode');
+  ctx.fillStyle = isLight ? '#f7fafc' : '#111';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   for (let n of nodes) {
@@ -71,7 +72,8 @@ function loop() {
     }
   }
 
-  ctx.strokeStyle = 'rgba(100,200,255,0.2)';
+  ctx.strokeStyle = isLight ? 'rgba(30, 58, 138, 0.3)' : 'rgba(100,200,255,0.2)';
+  
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
       const a = nodes[i], b = nodes[j];
@@ -92,12 +94,12 @@ function loop() {
     const since = now - n.pulseTime;
     if (since < PULSE_DURATION) {
       const f = 1 - since / PULSE_DURATION;
-      ctx.fillStyle = `rgba(255,255,200,${0.8 * f + 0.2})`;
+      ctx.fillStyle = isLight ? `rgba(255, 215, 0, ${0.8 * f + 0.2})` : `rgba(255,255,200,${0.8 * f + 0.2})`;
       ctx.beginPath();
       ctx.arc(n.x, n.y, 4 + 3 * f, 0, Math.PI * 2);
       ctx.fill();
     } else {
-      ctx.fillStyle = '#68c3ff';
+      ctx.fillStyle = isLight ? '#ffd700' : '#68c3ff';
       ctx.beginPath();
       ctx.arc(n.x, n.y, 3, 0, Math.PI * 2);
       ctx.fill();
@@ -137,8 +139,36 @@ function updateClock() {
   }
 }
 
+// Theme toggle logic
+function setTheme(mode) {
+  document.body.classList.toggle('light-mode', mode === 'light');
+  if (mode === 'light') {
+    canvas.style.background = '#f7fafc';
+  } else {
+    canvas.style.background = '';
+  }
+}
+
+function getPreferredTheme() {
+  return localStorage.getItem('theme') || 'dark';
+}
+
+function toggleTheme() {
+  const current = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  localStorage.setItem('theme', next);
+}
+
 // Initialize clock and update every second
 document.addEventListener('DOMContentLoaded', function() {
   updateClock(); 
   setInterval(updateClock, 1000); 
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    setTheme(getPreferredTheme());
+    themeToggle.addEventListener('click', toggleTheme);
+  } else {
+    setTheme(getPreferredTheme());
+  }
 });

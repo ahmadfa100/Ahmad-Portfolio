@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Ahmad Faisal</title>
+  <link rel="icon" href="./images/batman logo.jpeg" type="image/png">
+  <link rel="stylesheet" href="./css/background.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="network"></canvas>
+
+  <!-- Navigation Header -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html">Ahmad Faisal</a>
+      </div>
+      <div class="nav-links">
+        <a href="projects.html" class="nav-link">
+          <i class="fas fa-rocket"></i>
+          <span>Projects</span>
+        </a>
+        <a href="index.html#experience" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Work</span>
+        </a>
+        <a href="blog.html" class="nav-link active">
+          <i class="fas fa-pen-fancy"></i>
+          <span>Blog</span>
+        </a>
+        <a href="index.html#connections" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <!-- Dark/Light Mode Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle dark and light mode">
+          <span class="icon-moon"></span>
+          <span class="icon-sun"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="blog">
+    <div class="blog-container">
+      <div class="blog-header">
+        <h2><i class="fas fa-pen-fancy"></i> Ahmad's Blog</h2>
+        <p>Insights, tutorials, and thoughts on technology, development, and innovation</p>
+      </div>
+      <div class="blog-search-filter" style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem;">
+        <input type="text" class="blog-search" placeholder="Search articles..." style="padding:0.75rem 1.5rem;border-radius:12px;border:1px solid #667eea;min-width:220px;font-size:1rem;outline:none;">
+        <div class="blog-tags-filter" style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;">
+          <span style="font-weight:600;color:#a8b2d1;">Tags:</span>
+          <button class="blog-tag" style="cursor:pointer;">All</button>
+          <button class="blog-tag" style="cursor:pointer;">AI</button>
+          <button class="blog-tag" style="cursor:pointer;">Web Dev</button>
+          <button class="blog-tag" style="cursor:pointer;">Competitive Programming</button>
+          <button class="blog-tag" style="cursor:pointer;">Career</button>
+        </div>
+      </div>
+      <div class="blog-content" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;">
+        <!-- Blog Post Card 1 -->
+        <article class="blog-post">
+          <div class="blog-post-image">
+            <div class="blog-image-placeholder">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="blog-post-meta">
+              <span class="blog-category">AI & Machine Learning</span>
+              <span class="blog-date">December 15, 2024</span>
+            </div>
+          </div>
+          <div class="blog-post-content">
+            <h3>The Future of AI in Software Development</h3>
+            <p class="blog-excerpt">
+              Exploring how artificial intelligence is revolutionizing the way we write code, debug applications, and build software solutions. From automated testing to intelligent code completion, AI is becoming an indispensable tool for developers.
+            </p>
+            <div class="blog-post-tags">
+              <span class="blog-tag">Artificial Intelligence</span>
+              <span class="blog-tag">Software Development</span>
+              <span class="blog-tag">Future Tech</span>
+            </div>
+            <div class="blog-post-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-book-open"></i>
+                Read Full Article
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Blog Post Card 2 -->
+        <article class="blog-post">
+          <div class="blog-post-image">
+            <div class="blog-image-placeholder">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="blog-post-meta">
+              <span class="blog-category">Web Dev</span>
+              <span class="blog-date">November 2, 2024</span>
+            </div>
+          </div>
+          <div class="blog-post-content">
+            <h3>10 Modern CSS Tricks Every Developer Should Know</h3>
+            <p class="blog-excerpt">
+              Discover the latest CSS techniques to create stunning, responsive, and interactive web interfaces. From glassmorphism to advanced grid layouts, these tips will level up your frontend skills.
+            </p>
+            <div class="blog-post-tags">
+              <span class="blog-tag">CSS</span>
+              <span class="blog-tag">Frontend</span>
+              <span class="blog-tag">Web Dev</span>
+            </div>
+            <div class="blog-post-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-book-open"></i>
+                Read Full Article
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Blog Post Card 3 -->
+        <article class="blog-post">
+          <div class="blog-post-image">
+            <div class="blog-image-placeholder">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="blog-post-meta">
+              <span class="blog-category">Competitive Programming</span>
+              <span class="blog-date">October 10, 2024</span>
+            </div>
+          </div>
+          <div class="blog-post-content">
+            <h3>How to Ace Coding Contests: My Top 7 Strategies</h3>
+            <p class="blog-excerpt">
+              A personal guide to preparing for and excelling in programming competitions. Learn about problem-solving mindsets, time management, and the best resources for practice.
+            </p>
+            <div class="blog-post-tags">
+              <span class="blog-tag">Competitive Programming</span>
+              <span class="blog-tag">Algorithms</span>
+              <span class="blog-tag">Tips</span>
+            </div>
+            <div class="blog-post-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-book-open"></i>
+                Read Full Article
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- Blog Post Card 4 -->
+        <article class="blog-post">
+          <div class="blog-post-image">
+            <div class="blog-image-placeholder">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="blog-post-meta">
+              <span class="blog-category">Career</span>
+              <span class="blog-date">September 1, 2024</span>
+            </div>
+          </div>
+          <div class="blog-post-content">
+            <h3>Landing Your First Tech Job: Lessons from My Journey</h3>
+            <p class="blog-excerpt">
+              My story of breaking into the tech industry, with actionable advice for students and recent graduates. Learn how to build a standout portfolio, network effectively, and ace interviews.
+            </p>
+            <div class="blog-post-tags">
+              <span class="blog-tag">Career</span>
+              <span class="blog-tag">Advice</span>
+              <span class="blog-tag">Portfolio</span>
+            </div>
+            <div class="blog-post-actions">
+              <a href="#" class="btn btn-primary">
+                <i class="fas fa-book-open"></i>
+                Read Full Article
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <i class="fas fa-share-alt"></i>
+                Share
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="blog-footer">
+        <a href="#" class="btn btn-more">
+          <i class="fas fa-plus"></i>
+          View All Articles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Ahmad Faisal</h3>
+          <p>Full-Stack Developer & Competitive Programmer</p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; <span id="footer-year"></span> Ahmad Faisal. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#profile" class="footer-link">Home</a>
+          <a href="index.html#projects" class="footer-link">Projects</a>
+          <a href="index.html#experience" class="footer-link">Experience</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./background.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentYear = new Date().getFullYear();
+      const footerYearElem = document.getElementById('footer-year');
+      if (footerYearElem) footerYearElem.textContent = currentYear;
+      // Theme toggle setup
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const mode = localStorage.getItem('theme') || 'dark';
+        document.body.classList.toggle('light-mode', mode === 'light');
+        themeToggle.addEventListener('click', () => {
+          const isLight = document.body.classList.toggle('light-mode');
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

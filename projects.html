@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Ahmad Faisal</title>
+    <link rel="icon" href="./images/batman logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <canvas id="network"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html">Ahmad Faisal</a>
+        </div>
+        <div class="nav-links">
+          <a href="projects.html" class="nav-link active">
+            <i class="fas fa-rocket"></i>
+            <span>Projects</span>
+          </a>
+          <a href="index.html#experience" class="nav-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Work</span>
+          </a>
+          <a href="blog.html" class="nav-link">
+            <i class="fas fa-pen-fancy"></i>
+            <span>Blog</span>
+          </a>
+          <a href="index.html#connections" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+          <!-- Dark/Light Mode Toggle Button -->
+          <button id="theme-toggle" aria-label="Toggle dark and light mode">
+            <span class="icon-moon"></span>
+            <span class="icon-sun"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2><i class="fas fa-rocket"></i> My Projects</h2>
+                <p>Explore a selection of my most impactful and innovative work, spanning web, mobile, and backend development.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Green Bridge</h3>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag" title="HTML5 & CSS3"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i></span>
+                            <span class="tech-tag" title="React"><i class="fab fa-react"></i></span>
+                            <span class="tech-tag" title="Node.js"><i class="fab fa-node-js"></i></span>
+                            <span class="tech-tag" title="PostgreSQL"><i class="fas fa-database"></i></span>
+                            <span class="tech-tag" title="Postman"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="Express"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="API Integration"><i class="fas fa-plug"></i></span>
+                            <span class="tech-tag" title="Git"><i class="fab fa-git-alt"></i></span>
+                        </div>
+                        <p class="project-description">
+                            A revolutionary platform connecting farmers and landowners for sustainable agricultural partnerships. Features real-time communication, contract management, and resource optimization tools.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item"><i class="fas fa-users"></i><span>Farmer-Landowner Matching</span></div>
+                            <div class="feature-item"><i class="fas fa-chart-line"></i><span>Resource Optimization</span></div>
+                            <div class="feature-item"><i class="fas fa-file-contract"></i><span>Contract Management</span></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/ahmadfa100/graduation-project-2.git" class="btn btn-secondary"><i class="fab fa-github"></i>Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-placeholder appointment">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Book Appointment</h3>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag" title="HTML5 & CSS3"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i></span>
+                            <span class="tech-tag" title="Bootstrap"><i class="fab fa-bootstrap"></i></span>
+                            <span class="tech-tag" title="C#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="SQL Server"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="ASP.NET Core MVC"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET Core" class="tech-icon-img"/></span>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive patient appointment management system with intelligent scheduling, automated reminders, and seamless healthcare provider coordination.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item"><i class="fas fa-clock"></i><span>Smart Scheduling</span></div>
+                            <div class="feature-item"><i class="fas fa-bell"></i><span>Automated Reminders</span></div>
+                            <div class="feature-item"><i class="fas fa-user-md"></i><span>Provider Coordination</span></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i>Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-placeholder bus">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Bus Ticket System</h3>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag" title="Java"><i class="fab fa-java"></i></span>
+                            <span class="tech-tag" title="PostgreSQL"><i class="fas fa-database"></i></span>
+                            <span class="tech-tag" title="JSP"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="JSP" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="Servlet"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Servlet" class="tech-icon-img"/></span>
+                            <span class="tech-tag" title="HTML5 & CSS3"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i></span>
+                            <span class="tech-tag" title="Bootstrap"><i class="fab fa-bootstrap"></i></span>
+                            <span class="tech-tag" title="Git"><i class="fab fa-git-alt"></i></span>
+                        </div>
+                        <p class="project-description">
+                            A modern mobile application for seamless bus ticket booking with real-time tracking, digital tickets, and integrated payment processing for enhanced travel experience.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item"><i class="fas fa-map-marker-alt"></i><span>Real-time Tracking</span></div>
+                            <div class="feature-item"><i class="fas fa-ticket-alt"></i><span>Digital Tickets</span></div>
+                            <div class="feature-item"><i class="fas fa-credit-card"></i><span>Secure Payments</span></div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/ahmadfa100/Online-Bus-Ticketing-System.git" class="btn btn-secondary"><i class="fab fa-github"></i>Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-footer">
+                <a href="#" class="btn btn-more">
+                    <i class="fas fa-plus"></i>
+                    View More Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Ahmad Faisal</h3>
+                    <p>Full-Stack Developer & Competitive Programmer</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="footer-year"></span> Ahmad Faisal. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="projects.html" class="footer-link">Projects</a>
+                    <a href="index.html#experience" class="footer-link">Experience</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./background.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentYear = new Date().getFullYear();
+            const footerYearElem = document.getElementById('footer-year');
+            if (footerYearElem) footerYearElem.textContent = currentYear;
+        });
+    </script>
+</body>
+</html>

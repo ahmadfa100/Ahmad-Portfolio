@@ -11,7 +11,43 @@
 <body>
   <canvas id="network"></canvas>
 
-  <section class="profile">
+  <!-- Navigation Header -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="#profile">Ahmad Faisal</a>
+      </div>
+      <div class="nav-links">
+        <a href="#experience" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Work</span>
+        </a>
+        <a href="#projects" class="nav-link">
+          <i class="fas fa-rocket"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#courses" class="nav-link">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Courses</span>
+        </a>
+        <a href="blog.html" class="nav-link">
+          <i class="fas fa-pen-fancy"></i>
+          <span>Blog</span>
+        </a>
+        <a href="#connections" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <!-- Dark/Light Mode Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle dark and light mode">
+          <span class="icon-moon"></span>
+          <span class="icon-sun"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="profile" id="profile">
     <div class="profile-container">
       <!-- Clock Component -->
       <div class="clock-container">
@@ -114,6 +150,113 @@
                 <!-- <span class="skill-tag">Docker</span> -->
                 <!-- <span class="skill-tag">AWS</span> -->
                 <span class="skill-tag">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="experience-container">
+      <div class="experience-header">
+        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <p>My journey through leading technology companies</p>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="timeline-item current-position">
+          <div class="timeline-marker tjdeed">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card current-experience">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>TJDEED Technology Company</h3>
+                  <p class="position">Internship Trainee</p>
+                  <p class="duration current-duration">2025 - Present</p>
+                </div>
+                <div class="company-logo tjdeed-logo">
+                  <a href="https://tjdeed.com/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <img src="./company logos/Tjdeed logo.png" alt="TJDEED Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Specialized in IT Service Management (ITSM) training, delivering comprehensive educational programs to enhance organizational IT service delivery capabilities. Focus on modern ITSM frameworks, best practices, and implementation strategies.</p>
+                
+                <div class="achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    <li>Developed and delivered ITSM training programs for 50+ professionals</li>
+                    <li>Created comprehensive curriculum covering ITIL, DevOps, and Agile methodologies</li>
+                    <li>Improved client IT service delivery efficiency by 40% through training initiatives</li>
+                    <li>Mentored teams in implementing ITSM best practices and tools</li>
+                  </ul>
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies & Frameworks</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">ITSM</span>
+                    <span class="tech-tag">ITIL</span>
+                    <!-- <span class="tech-tag">DevOps</span> -->
+                    <span class="tech-tag">Agile</span>
+                    <span class="tech-tag">ServiceNow</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker google">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header-content">
+                <div class="company-info">
+                  <h3>Clever Mind POB</h3>
+                  <p class="position">Web Development Trainee</p>
+                  <p class="duration">2024 June - 2024 Sep</p>
+                </div>
+                <div class="company-logo google-logo">
+                  <a href="https://www.clevermindpob.org/" target="_blank" rel="noopener noreferrer" class="company-link">
+                    <img src="./company logos/Clever mind Pob logo.png" alt="Clever Mind POB Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
+                  </a>
+                </div>
+              </div>
+              
+              <div class="experience-description">
+                <p>Completed a 3‑month intensive training program in web development, mastering HTML5, CSS3, and vanilla JavaScript. Built and styled responsive page layouts, implemented interactive UI components, and practiced problem‑solving through hands‑on exercises and small projects. Gained experience with version control (Git) and modern development workflows.</p>
+                
+                <div class="achievements">
+             <h4>Key Achievements</h4>
+              <ul>
+                <li>Mastered foundational HTML, CSS, and JavaScript concepts through in‑depth initial lessons</li>
+                <li>Modified and optimized 3+ existing projects, reapplying and solidifying university‑taught skills in practical scenarios</li>
+                <li>Analyzed and worked with official documentation (decoding requirements, reading specs) to implement features correctly</li>
+                <li>Built an entire web project from scratch—planning, design, development, and deployment—demonstrating end‑to‑end capability</li>
+                <li>Recreated and extended coursework examples into personal applications to fully internalize and practice quality attributes</li>
+              </ul>
+
+                  
+                </div>
+                
+                <div class="tech-stack">
+                  <h4>Technologies</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JS</span>
+   
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -286,7 +429,7 @@
       </div>
       
       <div class="projects-footer">
-        <a href="#" class="btn btn-more">
+        <a href="projects.html" class="btn btn-more">
           <i class="fas fa-plus"></i>
           View More Projects
         </a>
@@ -294,212 +437,118 @@
     </div>
   </section>
 
-  <section class="experience">
-    <div class="experience-container">
-      <div class="experience-header">
-        <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-        <p>My journey through leading technology companies</p>
+  <section class="courses" id="courses">
+    <div class="courses-container">
+      <div class="courses-header">
+        <h2><i class="fas fa-graduation-cap"></i> Training & Courses</h2>
+        <p>Continuous learning and skill development</p>
       </div>
       
-      <div class="experience-timeline">
-        <div class="timeline-item current-position">
-          <div class="timeline-marker tjdeed">
-            <i class="fas fa-chalkboard-teacher"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="experience-card current-experience">
-              <div class="experience-header-content">
-                <div class="company-info">
-                  <h3>TJDEED Technology Company</h3>
-                  <p class="position">Internship Trainee</p>
-                  <p class="duration current-duration">2025 - Present</p>
-                </div>
-                <div class="company-logo tjdeed-logo">
-                  <a href="https://tjdeed.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <img src="./company logos/Tjdeed logo.png" alt="TJDEED Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="experience-description">
-                <p>Specialized in IT Service Management (ITSM) training, delivering comprehensive educational programs to enhance organizational IT service delivery capabilities. Focus on modern ITSM frameworks, best practices, and implementation strategies.</p>
-                
-                <div class="achievements">
-                  <h4>Key Achievements</h4>
-                  <ul>
-                    <li>Developed and delivered ITSM training programs for 50+ professionals</li>
-                    <li>Created comprehensive curriculum covering ITIL, DevOps, and Agile methodologies</li>
-                    <li>Improved client IT service delivery efficiency by 40% through training initiatives</li>
-                    <li>Mentored teams in implementing ITSM best practices and tools</li>
-                  </ul>
-                </div>
-                
-                <div class="tech-stack">
-                  <h4>Technologies & Frameworks</h4>
-                  <div class="tech-tags">
-                    <span class="tech-tag">ITSM</span>
-                    <span class="tech-tag">ITIL</span>
-                    <!-- <span class="tech-tag">DevOps</span> -->
-                    <span class="tech-tag">Agile</span>
-                    <span class="tech-tag">ServiceNow</span>
-                  </div>
-                </div>
+      <div class="courses-showcase">
+        <div class="course-hexagon hope-course">
+          <div class="hex-content">
+            <div class="hex-icon">
+              <img src="./company logos/The Hope logo.png" alt="The Hope Logo" />
+            </div>
+            <div class="hex-info">
+              <h3>The Hope International Edu</h3>
+              <p class="course-title">ASP .NET Core MVC</p>
+              <div class="course-badge">
+                <span>2025 Feb - March</span>
               </div>
             </div>
+            <div class="hex-description">
+              <p>Intensive program focused on building dynamic, data‑driven web applications using ASP .NET Core MVC.</p>
+            </div>
+            <div class="hex-highlights">
+              <div class="highlight-dot">
+                <i class="fas fa-code"></i>
+                <span>MVC</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-database"></i>
+                <span>SQL Server</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-cogs"></i>
+                <span>C#</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fab fa-microsoft"></i>
+                <span>ASP.NET</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-server"></i>
+                <span>Core</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-database"></i>
+                <span>Entity Framework</span>
+              </div>
+            </div>
+            <a href="https://thehope-tech.com/" target="_blank" class="hex-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker google">
-            <i class="fas fa-tasks"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="experience-card">
-              <div class="experience-header-content">
-                <div class="company-info">
-                  <h3>Clever Mind POB</h3>
-                  <p class="position">Web Development Trainee</p>
-                  <p class="duration">2024 June - 2024 Sep</p>
-                </div>
-                <div class="company-logo google-logo">
-                  <a href="https://www.clevermindpob.org/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <img src="./company logos/Clever mind Pob logo.png" alt="Clever Mind POB Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="experience-description">
-                <p>Completed a 3‑month intensive training program in web development, mastering HTML5, CSS3, and vanilla JavaScript. Built and styled responsive page layouts, implemented interactive UI components, and practiced problem‑solving through hands‑on exercises and small projects. Gained experience with version control (Git) and modern development workflows.</p>
-                
-                <div class="achievements">
-             <h4>Key Achievements</h4>
-              <ul>
-                <li>Mastered foundational HTML, CSS, and JavaScript concepts through in‑depth initial lessons</li>
-                <li>Modified and optimized 3+ existing projects, reapplying and solidifying university‑taught skills in practical scenarios</li>
-                <li>Analyzed and worked with official documentation (decoding requirements, reading specs) to implement features correctly</li>
-                <li>Built an entire web project from scratch—planning, design, development, and deployment—demonstrating end‑to‑end capability</li>
-                <li>Recreated and extended coursework examples into personal applications to fully internalize and practice quality attributes</li>
-              </ul>
-
-                  
-                </div>
-                
-                <div class="tech-stack">
-                  <h4>Technologies</h4>
-                  <div class="tech-tags">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JS</span>
-   
-                  </div>
-                </div>
+        <div class="course-hexagon udemy-course">
+          <div class="hex-content">
+            <div class="hex-icon">
+              <img src="./company logos/logo-udemy.svg" alt="Udemy Logo" />
+            </div>
+            <div class="hex-info">
+              <h3>Udemy</h3>
+              <p class="course-title">Web Development Bootcamp</p>
+              <div class="course-badge">
+                <span>2024 OCT - 2025 June</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker microsoft">
-            <i class="fas fa-chalkboard-teacher"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="experience-card">
-              <div class="experience-header-content">
-                <div class="company-info">
-                  <h3>The Hope International Edu</h3>
-                  <p class="position">ASP .NET Core MVC Trainee</p>
-                  <p class="duration">2025 feb - 2025 march</p>
-                </div>
-                <div class="company-logo microsoft-logo">
-                  <a href="https://thehope-tech.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <img src="./company logos/The Hope logo.png" alt="The Hope Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="experience-description">
-                <p>Completed a 3‑month intensive program focused on building dynamic, data‑driven web applications using ASP .NET Core MVC. Gained hands‑on experience in C# development, designing Razor views, and implementing MVC patterns. Worked with Entity Framework Core for database modeling and CRUD operations, configured routing and middleware, and secured applications using built‑in authentication and authorization. Practiced test‑driven development (unit testing controllers and services) and collaborated via Git/GitHub in a team environment.</p>
-                
-                <div class="achievements">
-                 <h4>Key Achievements</h4>
-                <ul>
-                  <li>Applied ASP .NET Core MVC fundamentals and SQL Server integration in a comprehensive project covering C# web development basics</li>
-                  <li>Completed and solved all assigned coursework and exercises to reinforce understanding of MVC patterns, routing, and data access</li>
-                  <li>Pursued independent projects afterward—building custom web applications from scratch—to solidify and master the skills learned</li>
-                </ul>
-
-                  
-                </div>
-                
-                <div class="tech-stack">
-                  <h4>Technologies</h4>
-                  <div class="tech-tags">
-                    <span class="tech-tag">C#</span>
-                    <span class="tech-tag">ASP.net</span>
-                    <span class="tech-tag">HTML and CSS</span>
-                    <span class="tech-tag">SQL server</span>
-                    <span class="tech-tag">MVC</span>
-                  </div>
-                </div>
-              </div>
+            <div class="hex-description">
+              <p>Mastered both front‑end and back‑end technologies with comprehensive full-stack development training.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker amazon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="experience-card">
-              <div class="experience-header-content">
-                <div class="company-info">
-                  <h3>Udemy</h3>
-                  <p class="position">Student Trainee</p>
-                  <p class="duration">2024 OCT  - 2025 June</p>
-                </div>
-                <div class="company-logo amazon-logo">
-                  <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" class="company-link">
-                    <img src="./company logos/logo-udemy.svg" alt="Udemy Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;background:#fff;" />
-                  </a>
-                </div>
+            <div class="hex-highlights">
+              <div class="highlight-dot">
+                <i class="fab fa-html5"></i>
+                <span>HTML CSS And JS</span>
               </div>
-              
-              <div class="experience-description">
-                <p>
-                  Completed Angela Yu’s “The Complete 2024 Web Development Bootcamp” on Udemy, mastering both front‑end and back‑end technologies. Built responsive user interfaces with HTML5, CSS3, and Bootstrap, and implemented interactive behavior using vanilla JavaScript and React. Developed server‑side applications with Node.js, Express, and MongoDB, designing RESTful APIs and integrating user authentication with JWT. Learned SQL fundamentals and ORM patterns with Sequelize, and practiced deployment workflows on Heroku and Netlify. Collaborated via Git/GitHub, followed Agile principles, and delivered three capstone projects: a blog platform, an e‑commerce site, and a real‑time chat app.
-                  </p>
-                
-                <div class="achievements">
-                 <h4>Key Achievements</h4>
-                  <ul>
-                    <li>Applied course concepts directly in my graduation project, building both front‑end (React) and back‑end (Node.js) components</li>
-                    <li>Completed all assignments and quizzes with strong results, reinforcing core concepts in HTML, CSS, JavaScript, and RESTful API design</li>
-                    <li>Developed and deployed personal projects—a responsive portfolio site and a Node.js‑powered API service—to solidify learning</li>
-                    <li>Integrated quality attributes into projects by implementing security best practices (JWT authentication, input validation) and writing unit tests with Jest</li>
-                    <li>Practiced testing workflows and performance tuning to ensure maintainable, reliable full‑stack applications</li>
-                  </ul>
-
-                  
-                </div>
-                
-                <div class="tech-stack">
-                  <h4>Technologies</h4>
-                  <div class="tech-tags">
-                    <span class="tech-tag">HTML CSS And JS</span>
-                    <span class="tech-tag">Bootstrap</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">express and EJS</span>
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">Github</span>
-                    <span class="tech-tag">Mongo DB</span>
-                    <span class="tech-tag">Postgres SQL</span>
-                    <span class="tech-tag">React Native</span>
-                    <span class="tech-tag">API</span>
-                  </div>
-                </div>
+              <div class="highlight-dot">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
               </div>
+              <div class="highlight-dot">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-server"></i>
+                <span>Express and EJS</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fab fa-github"></i>
+                <span>Github</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-database"></i>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="highlight-dot">
+                <i class="fas fa-plug"></i>
+                <span>API</span>
+              </div>
+
             </div>
+            <a href="https://www.udemy.com/" target="_blank" class="hex-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -556,7 +605,7 @@
       </div>
       
       <div class="blog-footer">
-        <a href="#" class="btn btn-more">
+        <a href="blog.html" class="btn btn-more">
           <i class="fas fa-plus"></i>
           View All Articles
         </a>
@@ -628,7 +677,6 @@
       const yearsElem = document.getElementById('years-experience');
       if (yearsElem) yearsElem.textContent = `${experience}+`;
 
-      // Smooth scroll for profile image to Connections
       const profileImageContainer = document.querySelector('.profile-image-container');
       if (profileImageContainer) {
         profileImageContainer.style.cursor = 'pointer';
@@ -640,7 +688,6 @@
         });
       }
 
-      // Smooth scroll for Projects stat to Projects section
       const projectsStat = Array.from(document.querySelectorAll('.profile-stats .stat-item')).find(item => {
         const label = item.querySelector('.stat-label');
         return label && label.textContent.trim().toLowerCase() === 'projects';

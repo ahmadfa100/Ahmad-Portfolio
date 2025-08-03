@@ -6,6 +6,211 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
+/* Main Navigation */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-brand a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.nav-brand a:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-link.active::before {
+  left: 0;
+}
+
+.nav-link i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+  transform: scale(1.1);
+}
+
+.nav-link span {
+  font-weight: 600;
+}
+
+/* Light mode styles for navigation */
+body.light-mode .main-nav {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-brand a {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .nav-link {
+  color: #22223b;
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+body.light-mode .nav-link::before {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+}
+
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active {
+  color: #22223b;
+  border-color: #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+body.light-mode .nav-link.active::before {
+  left: 0;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .nav-brand a {
+    font-size: 1.3rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-link span {
+    display: none;
+  }
+  
+  .nav-link i {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+  
+  .nav-brand a {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+  }
+  
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+    margin-left: 0.5rem;
+  }
+  
+  #theme-toggle .icon-moon, #theme-toggle .icon-sun {
+    font-size: 1.2rem;
+  }
+}
+
+/* Add top padding to body to account for fixed navigation */
+body {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
 .profile {
   display: flex;
   justify-content: center;
@@ -17,8 +222,6 @@ body {
 .profile-container {
   max-width: 1200px;
   width: 100%;
-  /* background: rgba(17, 17, 17, 0.8); */
-  /* backdrop-filter: blur(5px); */
   border-radius: 32px;
   padding: 4rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -2186,6 +2389,486 @@ html {
   }
 }
 
+/* Courses Section */
+.courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
+}
+
+.courses-container {
+  max-width: 1400px;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(25px);
+  border-radius: 32px;
+  padding: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.courses-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.courses-header h2 i {
+  color: #667eea;
+  font-size: 2rem;
+}
+
+.courses-header p {
+  font-size: 1.1rem;
+  color: #a8b2d1;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Courses Showcase */
+.courses-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+/* Hexagon Course Cards */
+.course-hexagon {
+  position: relative;
+  width: 320px;
+  height: 380px;
+  margin: 2rem;
+  perspective: 1000px;
+  animation: floatIn 1s ease-out both;
+}
+
+.course-hexagon:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.course-hexagon:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.course-hexagon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #667eea);
+  background-size: 400% 400%;
+  border-radius: 20px;
+  animation: gradientShift 3s ease infinite, float 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+.course-hexagon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 17, 17, 0.95);
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hex-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.course-hexagon:hover .hex-content {
+  transform: translateY(-10px) rotateX(5deg);
+}
+
+.course-hexagon:hover::before {
+  animation: gradientShift 1.5s ease infinite, float 3s ease-in-out infinite;
+}
+
+/* Hexagon Icon */
+.hex-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hex-icon img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.course-hexagon:hover .hex-icon img {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Hexagon Info */
+.hex-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hex-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.course-title {
+  font-size: 0.9rem;
+  color: #a8b2d1;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.course-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #667eea;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+.course-badge:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Hexagon Description */
+.hex-description {
+  margin-bottom: 1.5rem;
+}
+
+.hex-description p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #a8b2d1;
+  text-align: center;
+}
+
+/* Hexagon Highlights */
+.hex-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-dot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  color: #a8b2d1;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.highlight-dot i {
+  color: #667eea;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.highlight-dot:hover {
+  color: #e2e8f0;
+  transform: translateX(3px);
+}
+
+/* Hexagon Tech */
+.hex-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tech-chip {
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #e2e8f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-chip:hover {
+  background: rgba(102, 126, 234, 0.25);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Hexagon Link */
+.hex-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #667eea;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-link:hover {
+  color: #764ba2;
+  background: rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.4);
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Course-specific styling */
+.hope-course::before {
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #667eea);
+}
+
+.udemy-course::before {
+  background: linear-gradient(45deg, #ff9900, #232f3e, #37475a, #146eb4, #ff9900);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Design for Courses */
+@media (max-width: 1200px) {
+  .courses-showcase {
+    gap: 2rem;
+  }
+  
+  .course-hexagon {
+    width: 300px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses {
+    padding: 1rem;
+  }
+  
+  .courses-container {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .courses-header h2 {
+    font-size: 2rem;
+  }
+  
+  .courses-header p {
+    font-size: 1rem;
+  }
+  
+  .courses-showcase {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .course-hexagon {
+    width: 280px;
+    height: 340px;
+    margin: 1rem;
+  }
+  
+  .hex-content {
+    padding: 1.5rem;
+  }
+  
+  .hex-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .course-title {
+    font-size: 0.85rem;
+  }
+  
+  .hex-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .hex-description p {
+    font-size: 0.8rem;
+  }
+  
+  .highlight-dot {
+    font-size: 0.7rem;
+  }
+  
+  .highlight-dot {
+    font-size: 0.7rem;
+  }
+  
+  .tech-chip {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .course-hexagon {
+    width: 260px;
+    height: 320px;
+    margin: 0.5rem;
+  }
+  
+  .hex-content {
+    padding: 1rem;
+  }
+  
+  .hex-info h3 {
+    font-size: 1rem;
+  }
+  
+  .course-title {
+    font-size: 0.8rem;
+  }
+  
+  .course-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .hex-icon img {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .hex-description p {
+    font-size: 0.75rem;
+  }
+  
+  .highlight-dot {
+    font-size: 0.65rem;
+    padding: 0.2rem 0;
+  }
+  
+  .highlight-dot {
+    font-size: 0.65rem;
+    padding: 0.2rem 0;
+  }
+  
+  .tech-chip {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+  }
+  
+  .hex-link {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
 /* Footer Section */
 .footer {
   display: flex;
@@ -2503,6 +3186,7 @@ html {
   background: linear-gradient(90deg, #ffd700 20%, #fff 40%, #ffd700 60%, #fff8dc 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine-move 2s linear infinite, glow-pulse 5.5s ease-in-out infinite;
   font-weight: bold;
@@ -2524,4 +3208,601 @@ html {
   50% {
     text-shadow: 0 0 24px #fff8dc, 0 0 32px #ffd700, 0 0 40px #fff;
   }
+}
+
+/* Dark/Light Mode Toggle Button */
+#theme-toggle {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+#theme-toggle:focus {
+  box-shadow: 0 0 0 2px #667eea, 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+#theme-toggle .icon-moon, #theme-toggle .icon-sun {
+  position: absolute;
+  font-size: 1.7rem;
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: none;
+}
+#theme-toggle .icon-moon {
+  opacity: 1;
+  color: #fff8dc;
+  filter: drop-shadow(0 0 8px #ffd700);
+  transform: rotate(0deg) scale(1);
+}
+#theme-toggle .icon-sun {
+  opacity: 0;
+  color: #ffd700;
+  filter: drop-shadow(0 0 12px #fff8dc);
+  transform: rotate(-30deg) scale(0.7);
+}
+body.light-mode #theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(30deg) scale(0.7);
+}
+body.light-mode #theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+#theme-toggle:hover {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Sun/Moon SVG icons (using pseudo-elements for creativity) */
+#theme-toggle .icon-moon::before {
+  content: '\f186'; /* FontAwesome moon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+#theme-toggle .icon-sun::before {
+  content: '\f185'; /* FontAwesome sun */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+/* Light Mode Theme Overrides */
+body.light-mode {
+  background: #f7fafc;
+  color: #22223b;
+}
+body.light-mode .profile-container,
+body.light-mode .projects-container,
+body.light-mode .blog-container,
+body.light-mode .experience-container,
+body.light-mode .footer-container,
+body.light-mode .connections-container {
+  /* background: rgba(255,255,255,0.85) !important; */
+  color: #22223b !important;
+  border-color: rgba(30, 58, 138, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.08);
+}
+body.light-mode .projects-container,
+body.light-mode .blog-container,
+body.light-mode .experience-container,
+body.light-mode .footer-container,
+body.light-mode .connections-container{
+  background: rgba(255,255,255,0.85) !important;
+
+}
+body.light-mode .profile-container::after,
+body.light-mode .projects-container::after,
+body.light-mode .blog-container::after,
+body.light-mode .experience-container::after,
+body.light-mode .footer-container::after {
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+}
+body.light-mode .stat-item,
+body.light-mode .project-card,
+body.light-mode .blog-post,
+body.light-mode .experience-card {
+  background: rgba(255,255,255,0.7) !important;
+  color: #22223b !important;
+  border-color: rgba(30, 58, 138, 0.08) !important;
+}
+body.light-mode .stat-label,
+body.light-mode .project-description,
+body.light-mode .blog-excerpt,
+body.light-mode .position,
+body.light-mode .achievements li,
+body.light-mode .tagline,
+body.light-mode .professional-title,
+body.light-mode .professional-subtitle,
+body.light-mode .about-section h3,
+body.light-mode .skills-section h3,
+body.light-mode .skill-category h4,
+body.light-mode .project-content h3,
+body.light-mode .project-features .feature-item span,
+body.light-mode .blog-post-content h3,
+body.light-mode .blog-post-tags .blog-tag,
+body.light-mode .experience-description p,
+body.light-mode .tech-stack h4,
+body.light-mode .achievements h4,
+body.light-mode .company-info h3,
+body.light-mode .footer-info p,
+body.light-mode .connections-container p,
+body.light-mode .projects-header p,
+body.light-mode .blog-header p,
+body.light-mode .experience-header p {
+  color: #3a3a3a !important;
+}
+body.light-mode .name-title h1,
+body.light-mode .projects-header h2,
+body.light-mode .blog-header h2,
+body.light-mode .experience-header h2,
+body.light-mode .footer-info h3,
+body.light-mode .connections-container h3 {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+body.light-mode .btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+  color: #22223b;
+  border-color: #ffd700;
+}
+body.light-mode .btn-secondary {
+  background: rgba(30, 58, 138, 0.08);
+  color: #22223b;
+  border-color: #ffd700;
+}
+body.light-mode .btn-more {
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
+  color: #22223b;
+  border-color: #ffd700;
+}
+body.light-mode .tech-tag, body.light-mode .skill-tag, body.light-mode .blog-tag {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: #ffd700;
+  color: #22223b;
+}
+body.light-mode .tech-tag:hover, body.light-mode .skill-tag:hover, body.light-mode .blog-tag:hover {
+  background: rgba(255, 215, 0, 0.25);
+  border-color: #fbbf24;
+}
+body.light-mode .company-logo, body.light-mode .tjdeed-logo {
+  background: linear-gradient(135deg, #ffd700, #fbbf24);
+}
+body.light-mode .timeline-marker {
+  background: linear-gradient(135deg, #ffd700, #fbbf24);
+  box-shadow: 0 0 20px #ffd70088;
+}
+
+body.light-mode .timeline-marker i {
+  color: #22223b !important;
+}
+
+body.light-mode .company-logo i {
+  color: #22223b !important;
+}
+
+body.light-mode .company-link {
+  color: #22223b !important;
+}
+
+body.light-mode .company-link:hover {
+  color: #22223b !important;
+}
+
+/* Light mode for blog post meta elements */
+body.light-mode .blog-category {
+  color: #ffffff !important;
+}
+
+body.light-mode .blog-date {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .blog-post-meta {
+  color: #3a3a3a !important;
+}
+
+/* Light mode for any remaining text elements */
+body.light-mode .profile-image-container img {
+  border-color: rgba(255, 215, 0, 0.3) !important;
+}
+
+body.light-mode .profile-image-container:hover img {
+  border-color: rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Ensure all text in light mode is readable */
+body.light-mode * {
+  color: inherit;
+}
+
+body.light-mode .profile-container,
+body.light-mode .projects-container,
+body.light-mode .blog-container,
+body.light-mode .experience-container,
+body.light-mode .footer-container,
+body.light-mode .connections-container {
+  color: #22223b !important;
+}
+body.light-mode .current-experience {
+  border-color: #ffd700;
+  box-shadow: 0 8px 32px #ffd70033;
+}
+body.light-mode .current-duration {
+  /* background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%); */
+  color: #22223b;
+  border-color: #ffd700;
+}
+body.light-mode .footer {
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
+}
+body.light-mode .footer-link {
+  background: rgba(255, 215, 0, 0.08);
+  border-color: #ffd700;
+  color: #22223b;
+}
+body.light-mode .footer-link:hover {
+  background: rgba(255, 215, 0, 0.18);
+  color: #22223b;
+}
+body.light-mode .clock {
+  background: rgba(255,255,255,0.9);
+  border-color: #ffd700;
+  color: #22223b;
+}
+body.light-mode .digital-time {
+  color: #22223b;
+}
+body.light-mode .profile-status {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  color: #22223b;
+}
+body.light-mode .status-dot {
+  background: #ffd700;
+}
+body.light-mode .connections-container {
+  background: rgba(255,255,255,0.9) !important;
+}
+body.light-mode .social-link {
+  background: rgba(255,255,255,0.7);
+  color: #22223b;
+  border-color: #ffd70033;
+}
+body.light-mode .social-link:hover {
+  background: #fffbe6;
+  border-color: #ffd700;
+  color: #22223b;
+}
+body.light-mode .shine-effect {
+  background: linear-gradient(90deg, #ffd700 20%, #fff8dc 40%, #ffd700 60%, #fffbe6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #ffd700;
+}
+
+/* Additional light mode text color fixes */
+body.light-mode .profile-info h1,
+body.light-mode .profile-info h2,
+body.light-mode .profile-info h3,
+body.light-mode .profile-info h4,
+body.light-mode .profile-info h5,
+body.light-mode .profile-info h6 {
+  color: #22223b !important;
+}
+
+body.light-mode .profile-status {
+  color: #22223b !important;
+}
+
+body.light-mode .profile-status span {
+  color: #22223b !important;
+}
+
+body.light-mode .stat-number {
+  color: #ffd700 !important;
+}
+
+body.light-mode .stat-label {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .tagline {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .professional-title,
+body.light-mode .professional-subtitle {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .professional-title i,
+body.light-mode .professional-subtitle i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .about-section h3,
+body.light-mode .skills-section h3 {
+  color: #22223b !important;
+}
+
+body.light-mode .about-section h3 i,
+body.light-mode .skills-section h3 i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .skill-category h4 {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .project-content h3 {
+  color: #22223b !important;
+}
+
+body.light-mode .project-features .feature-item span {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .project-features .feature-item i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .blog-post-content h3 {
+  color: #22223b !important;
+}
+
+body.light-mode .blog-post-tags .blog-tag {
+  color: #22223b !important;
+}
+
+body.light-mode .experience-description p {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .tech-stack h4,
+body.light-mode .achievements h4 {
+  color: #22223b !important;
+}
+
+body.light-mode .company-info h3 {
+  color: #22223b !important;
+}
+
+body.light-mode .position {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .duration {
+  color: #22223b !important;
+}
+
+body.light-mode .footer-info p {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .connections-container h3 {
+  color: #22223b !important;
+}
+
+body.light-mode .projects-header p,
+body.light-mode .blog-header p,
+body.light-mode .experience-header p {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .social-link {
+  color: #22223b !important;
+}
+
+body.light-mode .social-link span {
+  color: #22223b !important;
+}
+
+body.light-mode .footer-link {
+  color: #22223b !important;
+}
+
+body.light-mode .footer-copyright p {
+  color: #3a3a3a !important;
+}
+
+/* Light mode styles for Courses section */
+body.light-mode .courses {
+  background: linear-gradient(135deg, #f7fafc 0%, #fffbe6 100%) !important;
+}
+
+body.light-mode .courses-container {
+  background: rgba(255,255,255,0.85) !important;
+  color: #22223b !important;
+  border-color: rgba(30, 58, 138, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.08);
+}
+
+body.light-mode .courses-header h2 {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .courses-header p {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .course-card {
+  background: rgba(255,255,255,0.7) !important;
+  color: #22223b !important;
+  border-color: rgba(30, 58, 138, 0.08) !important;
+}
+
+body.light-mode .hex-info h3 {
+  background: linear-gradient(135deg, #ffd700 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .course-title {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .course-badge {
+  color: #22223b !important;
+  border-color: #ffd700;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(251, 191, 36, 0.2));
+}
+
+body.light-mode .course-badge:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(251, 191, 36, 0.3));
+  border-color: #fbbf24;
+}
+
+body.light-mode .hex-description p {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .highlight-dot {
+  color: #3a3a3a !important;
+}
+
+body.light-mode .highlight-dot i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .hex-link {
+  color: #ffd700 !important;
+  border-color: #ffd700 !important;
+  background: rgba(255, 215, 0, 0.1) !important;
+}
+
+body.light-mode .hex-link:hover {
+  color: #fbbf24 !important;
+  background: rgba(255, 215, 0, 0.2) !important;
+  border-color: #fbbf24 !important;
+}
+
+body.light-mode .hex-icon img {
+  background: #fff !important;
+  border: 2px solid #ffd700 !important;
+}
+
+body.light-mode .tech-chip {
+  background: rgba(255, 215, 0, 0.15) !important;
+  border-color: #ffd700 !important;
+  color: #22223b !important;
+}
+
+body.light-mode .tech-chip:hover {
+  background: rgba(255, 215, 0, 0.25) !important;
+  border-color: #fbbf24 !important;
+}
+
+body.light-mode .course-hexagon::after {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 215, 0, 0.2) !important;
+}
+
+body.light-mode .hope-course::before {
+  background: linear-gradient(45deg, #ffd700, #fbbf24, #fbbf24, #fbbf24, #ffd700) !important;
+}
+
+body.light-mode .udemy-course::before {
+  background: linear-gradient(45deg, #ffd700, #fbbf24, #fbbf24, #fbbf24, #ffd700) !important;
+}
+
+/* Light mode navigation and interactive elements */
+body.light-mode .nav-link {
+  color: #22223b !important;
+}
+
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active {
+  color: #22223b !important;
+}
+
+body.light-mode .nav-brand a {
+  color: #22223b !important;
+}
+
+body.light-mode .btn {
+  color: #22223b !important;
+}
+
+body.light-mode .btn-primary {
+  color: #22223b !important;
+}
+
+body.light-mode .btn-secondary {
+  color: #22223b !important;
+}
+
+body.light-mode .btn-more {
+  color: #22223b !important;
+}
+
+body.light-mode .digital-time {
+  color: #22223b !important;
+}
+
+/* Light mode for icons in various sections */
+body.light-mode .feature-item i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .achievements h4::before {
+  color: #ffd700 !important;
+}
+
+body.light-mode .tech-stack h4::before {
+  color: #ffd700 !important;
+}
+
+body.light-mode .about-section h3 i,
+body.light-mode .skills-section h3 i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .projects-header h2 i,
+body.light-mode .blog-header h2 i,
+body.light-mode .experience-header h2 i {
+  color: #ffd700 !important;
+}
+
+body.light-mode .experience {
+  background: linear-gradient(135deg, #f7fafc 0%, #fffbe6 100%) !important;
+}
+body.light-mode .blog {
+  background: linear-gradient(135deg, #f7fafc 0%, #fffbe6 100%) !important;
+}
+
+body.light-mode .projects {
+  background: linear-gradient(135deg, #f7fafc 0%, #fffbe6 100%) !important;
+}
+
+/* Light mode styles for theme toggle */
+body.light-mode #theme-toggle {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.2);
+  color: #22223b;
+}
+
+body.light-mode #theme-toggle:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+body.light-mode #theme-toggle:focus {
+  box-shadow: 0 0 0 2px #ffd700, 0 4px 15px rgba(255, 215, 0, 0.3);
 }
