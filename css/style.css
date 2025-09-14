@@ -1828,12 +1828,6 @@ html {
   animation: gradientShift 3s ease infinite;
 }
 
-.timeline-marker.tjdeed {
-  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
-  background-size: 400% 400%;
-  animation: gradientShift 3s ease infinite;
-  box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
-}
 
 /* Current Position Special Styling */
 .current-position {
@@ -1897,19 +1891,6 @@ html {
   }
 }
 
-.tjdeed-logo {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  animation: tjdeedLogoGlow 3s ease-in-out infinite;
-}
-
-@keyframes tjdeedLogoGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
-  }
-}
 
 .timeline-marker:hover {
   transform: scale(1.1);
@@ -3375,7 +3356,7 @@ body.light-mode .tech-tag:hover, body.light-mode .skill-tag:hover, body.light-mo
   background: rgba(255, 215, 0, 0.25);
   border-color: #fbbf24;
 }
-body.light-mode .company-logo, body.light-mode .tjdeed-logo {
+body.light-mode .company-logo {
   background: linear-gradient(135deg, #ffd700, #fbbf24);
 }
 body.light-mode .timeline-marker {
